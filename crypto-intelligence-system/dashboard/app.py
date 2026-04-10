@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
 
 # =========================
 # CONFIG
@@ -78,7 +79,11 @@ section[data-testid="stSidebar"] h1 {
 # =========================
 # Asumsi path tetap sama
 try:
-    df = pd.read_csv("data/clean_crypto_data.csv")
+    BASE_DIR = os.path.dirname(__file__)
+    file_path = os.path.join(BASE_DIR, "data", "clean_crypto_data.csv")
+    
+    df = pd.read_csv(file_path)
+    
     df["date"] = pd.to_datetime(df["date"])
 except:
     st.error("Data tidak ditemukan! Pastikan file CSV ada di folder 'data/'.")
