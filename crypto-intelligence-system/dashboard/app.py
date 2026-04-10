@@ -83,9 +83,7 @@ try:
     file_path = os.path.abspath(os.path.join(BASE_DIR, "..", "data", "clean_crypto_data.csv"))
     
     df = pd.read_csv(file_path)
-    st.write("BASE_DIR:", BASE_DIR)
-    st.write("FILE PATH:", file_path)
-    st.write("FILE EXISTS:", os.path.exists(file_path))
+   
     df["date"] = pd.to_datetime(df["date"])
 except:
     st.error("Data tidak ditemukan! Pastikan file CSV ada di folder 'data/'.")
