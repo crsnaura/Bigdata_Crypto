@@ -306,8 +306,9 @@ elif menu == "🔥 Correlation":
         linewidths=0.3,
         linecolor='gray',
         cbar=False
+        cbar=True
     )
-
+    ax.set_title("Correlation Heatmap (Log Return)", color="white")
     ax.set_facecolor("#020617")
     fig.patch.set_facecolor("#020617")
 
