@@ -298,6 +298,7 @@ elif menu == "🔥 Correlation":
     corr = df_log.corr()
 
     fig, ax = plt.subplots(figsize=(6, 4))
+
     sns.heatmap(
         corr,
         annot=True,
@@ -307,10 +308,19 @@ elif menu == "🔥 Correlation":
         linecolor='gray',
         cbar=True
     )
-    ax.set_title("Correlation Heatmap (Log Return)", color="white")
+    
     ax.set_facecolor("#020617")
     fig.patch.set_facecolor("#020617")
-
+    
+    # 🔥 INI YANG BIKIN NAMA KELUAR
+    ax.set_xticklabels(ax.get_xticklabels(), rotation=45, color='white')
+    ax.set_yticklabels(ax.get_yticklabels(), rotation=0, color='white')
+    
+    ax.tick_params(axis='x', labelsize=10)
+    ax.tick_params(axis='y', labelsize=10)
+    
+    ax.set_title("Correlation Heatmap (Log Return)", color="white")
+    
     st.pyplot(fig)
 
 # =========================
