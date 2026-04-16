@@ -305,7 +305,7 @@ elif menu == "🔥 Correlation":
         ax=ax,
         linewidths=0.3,
         linecolor='gray',
-        cbar=False
+        cbar=False,
         cbar=True
     )
     ax.set_title("Correlation Heatmap (Log Return)", color="white")
