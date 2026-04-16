@@ -73,9 +73,9 @@ section[data-testid="stSidebar"] h1 {
 # =========================
 # LOAD DATA
 # =========================
-df_price = pd.read_csv("data/hourly_price.csv")
-df_cum = pd.read_csv("data/cum_return.csv")
-df_log = pd.read_csv("data/log_return.csv")
+df_price = pd.read_csv("hourly_price.csv")
+df_cum = pd.read_csv("cum_return.csv")
+df_log = pd.read_csv("log_return.csv")
 
 df_price["timestamp"] = pd.to_datetime(df_price["timestamp"])
 df_cum["timestamp"] = pd.to_datetime(df_cum["timestamp"])
